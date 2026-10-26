@@ -1,0 +1,9 @@
+project: savantenvs/zstd-jni
+target: fuzz_compress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_compress/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_compress
+    libfuzzer: true
+    timeout: 10
