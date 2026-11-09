@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/zstd-jni/fuzz-decompress
+project: savantenvs/zstd-jni
+target: fuzz_decompress-mined-0afb51a
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_decompress-mined-0afb51a/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decompress
+    libfuzzer: true
+    timeout: 10
